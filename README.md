@@ -1,1 +1,1 @@
-# scs-tx-sandbox
+# Spring Cloud Stream sandbox for Kafka transactions

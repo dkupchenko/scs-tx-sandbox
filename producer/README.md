@@ -1,0 +1,1 @@
+# Spring Cloud Stream sandbox for Kafka producer 
