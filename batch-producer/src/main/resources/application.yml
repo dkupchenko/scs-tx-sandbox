@@ -12,19 +12,14 @@ spring.cloud:
       binder:
         replication-factor: 1
         min-partition-count: 1
-#        configuration:
-#          isolation:
-#            level: read_committed
+        configuration:
+          isolation:
+            level: read_committed
         transaction:
           transaction-id-prefix: sandbox-tx-
           producer.configuration:
             retries: 5
             acks: all
-        bindings:
-          ackSendPerson-in-0:
-            consumer:
-              configuration:
-                isolation.level: read_committed
     bindings:
       sendPerson-out-0:
         destination: demo.tx.out.send-person
