@@ -42,7 +42,15 @@ With `KafkaTransactionManager` and transactional call `PersonService.createAndSe
 [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] close(PT5S)
 ```
 
-Without transaction manager configured:
+Behind the scenes, these are the sequence of events (see https://spring.io/blog/2023/09/28/producer-initiated-transactions-in-spring-cloud-stream-kafka-applications):
+
+1. As soon as the method annotated with Transactional is called, the transaction interceptor kicks in through the AOP proxying mechanism, and it starts a new transaction by using the custom KafkaTransactionManager.
+2. When the transaction manager begins the transaction, the resource used by the transaction manager - the transactional resource holder (AKA, producer obtained from the producer factory) - is bound to the transaction.
+3. When the method calls the StreamBridge#send method, the underlying KafkaTemplate will use the same transactional resource created by the custom KafkaTransactionManager. Since a transaction is already in progress, it does not start another transaction, but the publishing occurs on the same transactional producer.
+4. As it calls more send methods, it will not start new transactions. Instead, it publishes via the same producer resource used in the original transaction.
+5. When the method exits, the interceptor asks the transaction manager to commit the transaction if there is no error. If any of the send operations or anything else in the method throws an exception, the interceptor asks the transaction manager to roll back the transaction. These calls eventually hit the KafkaResourceHolder commit or rollback methods, which calls the Kafka producer to commit or rollback the transaction.
+
+Without `KafkaTransactionManager` transaction manager configured:
 
 ```
 [   scheduling-1] i.k.s.s.t.p.service.PersonService        : [BEGIN]
