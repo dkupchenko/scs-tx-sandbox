@@ -1,5 +1,7 @@
 # Spring Cloud Stream sandbox for Kafka producer 
 
+This is sandbox for [Producer Initiated Transactions in Spring Cloud Stream Kafka Applications](https://spring.io/blog/2023/09/28/producer-initiated-transactions-in-spring-cloud-stream-kafka-applications)
+
 Kafka producer is transactional (see `transaction-id-prefix`is sent in `application.yml`)
 ```
 spring.cloud:

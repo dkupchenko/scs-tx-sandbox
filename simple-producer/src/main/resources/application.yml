@@ -5,6 +5,8 @@ spring.kafka:
     max.poll.interval.ms: 600000 # 10min
 
 spring.cloud:
+  function:
+    definition: "ackSendPerson"
   stream:
     kafka:
       binder:
@@ -15,9 +17,17 @@ spring.cloud:
           producer.configuration:
             retries: 5
             acks: all
+        bindings:
+          ackSendPerson-in-0:
+            consumer:
+              configuration:
+                isolation.level: read_committed
     bindings:
       sendPerson-out-0:
         destination: demo.tx.out.send-person
+      ackSendPerson-in-0:
+        destination: demo.tx.out.send-person
+        group: ackPersonGroup
 
 logging:
   level:

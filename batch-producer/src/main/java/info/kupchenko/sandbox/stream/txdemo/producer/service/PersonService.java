@@ -23,6 +23,7 @@ public class PersonService {
         sender.send(new Person(null, "Daniel Jones"));
         sender.send(new Person(null, "Lisa Jones"));
         log.info("[END]");
+        // throw new RuntimeException();
     }
 
 }

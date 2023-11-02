@@ -13,16 +13,7 @@ import org.springframework.messaging.MessageChannel;
 import java.util.function.Consumer;
 
 @Configuration
-@SuppressWarnings("rawtypes")
 public class AppConfig {
-
-    @Bean
-    KafkaTransactionManager customKafkaTransactionManager(DefaultBinderFactory binderFactory) {
-        KafkaMessageChannelBinder kafka = (KafkaMessageChannelBinder)binderFactory.getBinder("kafka", MessageChannel.class);
-        ProducerFactory<byte[], byte[]> transactionalProducerFactory = kafka.getTransactionalProducerFactory();
-        KafkaTransactionManager kafkaTransactionManager = new KafkaTransactionManager(transactionalProducerFactory);
-        return kafkaTransactionManager;
-    }
 
     @Bean
     Consumer<Person> ackSendPerson(LoggingConsumer logger) {
