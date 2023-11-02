@@ -2,12 +2,14 @@ package info.kupchenko.sandbox.stream.txdemo.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
+@EnableScheduling
 @SpringBootApplication
-public class TxDemoProducerApplication {
+public class ProducerApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TxDemoProducerApplication.class, args);
+		SpringApplication.run(ProducerApp.class, args);
 	}
 
 }
