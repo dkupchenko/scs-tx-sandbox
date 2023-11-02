@@ -1,5 +1,7 @@
 # Spring Cloud Stream sandbox for Kafka transactions
 
+see [Producer](producer/README.md)
+
 See
 1) [Introduction to Transactions in Spring Cloud Stream Kafka Applications](https://spring.io/blog/2023/09/27/introduction-to-transactions-in-spring-cloud-stream-kafka-applications)
 2) [Producer Initiated Transactions in Spring Cloud Stream Kafka Applications](https://spring.io/blog/2023/09/28/producer-initiated-transactions-in-spring-cloud-stream-kafka-applications)

@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+spring.kafka:
+  bootstrap-servers: localhost:9092
+  consumer.properties:
+    max.poll.records: 50
+    max.poll.interval.ms: 600000 # 10min
+
+spring.cloud:
+  stream:
+    kafka:
+      binder:
+        replication-factor: 1
+        min-partition-count: 1
+        transaction:
+          transaction-id-prefix: sandbox-tx-
+          producer.configuration:
+            retries: 5
+            acks: all
+    bindings:
+      sendPerson-out-0:
+        destination: demo.tx.out.send-person
+
+logging:
+  level:
+    org.springframework.transaction: TRACE
+    org.springframework.kafka.transaction: TRACE
+    org.springframework.kafka.producer: TRACE
+    org.springframework.kafka.core: TRACE
