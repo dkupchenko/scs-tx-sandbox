@@ -41,3 +41,38 @@ With `KafkaTransactionManager` and transactional call `PersonService.createAndSe
 [er-sandbox-tx-0] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(...), metadata: demo.tx.out.send-person-0@56
 [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] close(PT5S)
 ```
+
+Without transaction manager configured:
+
+```
+[   scheduling-1] i.k.s.s.t.p.service.PersonService        : [BEGIN]
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] beginTransaction()
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] send(ProducerRecord(...))
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] commitTransaction()
+[er-sandbox-tx-0] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(...), metadata: demo.tx.out.send-person-0@74
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] close(PT5S)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] beginTransaction()
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] send(ProducerRecord(...))
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] commitTransaction()
+[er-sandbox-tx-0] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(...), metadata: demo.tx.out.send-person-0@74
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] close(PT5S)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] beginTransaction()
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] send(ProducerRecord(...))
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] commitTransaction()
+[er-sandbox-tx-0] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(...), metadata: demo.tx.out.send-person-0@74
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] close(PT5S)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] beginTransaction()
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] send(ProducerRecord(...))
+[   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(...)
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] commitTransaction()
+[er-sandbox-tx-0] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(...), metadata: demo.tx.out.send-person-0@74
+[   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [...] close(PT5S)
+[   scheduling-1] i.k.s.s.t.p.service.PersonService        : [END]
+```
