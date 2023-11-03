@@ -3,6 +3,7 @@
 1. [Simple producer](simple-producer/README.md)
 2. [Batch producer](batch-producer/README.md)
 3. [JPA producer](jpa-producer/README.md)
+4. [consume-process-produce](consume-process-produce/README.md)
 
 See
 1) [Introduction to Transactions in Spring Cloud Stream Kafka Applications](https://spring.io/blog/2023/09/27/introduction-to-transactions-in-spring-cloud-stream-kafka-applications)

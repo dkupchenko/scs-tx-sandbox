@@ -12,6 +12,7 @@
 	    <module>simple-producer</module>
 	    <module>batch-producer</module>
 		<module>jpa-producer</module>
+		<module>consume-process-produce</module>
 	</modules>
 </project>
 
