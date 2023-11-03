@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 public class LoggingConsumer {
 
     public void consume(Person person) {
-        log.info("Received {}", person);
+        log.info("[Received] {}", person);
     }
 }

@@ -25,6 +25,4 @@ public class Person {
     @Column(nullable = false)
     String name;
 
-    @Column(nullable = false)
-    PersonStatus status;
 }

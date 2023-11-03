@@ -1,5 +1,5 @@
 spring.kafka:
-  bootstrap-servers: localhost:9092
+  bootstrap-servers: 192.168.2.240:9092
   consumer.properties:
     max.poll.records: 50
     max.poll.interval.ms: 600000 # 10min
