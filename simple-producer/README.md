@@ -1,4 +1,4 @@
-# Spring Cloud Stream sandbox for Kafka producer 
+# Spring Cloud Stream sandbox for Kafka simple producer 
 
 This is sandbox for [Producer Initiated Transactions in Spring Cloud Stream Kafka Applications](https://spring.io/blog/2023/09/28/producer-initiated-transactions-in-spring-cloud-stream-kafka-applications)
 
