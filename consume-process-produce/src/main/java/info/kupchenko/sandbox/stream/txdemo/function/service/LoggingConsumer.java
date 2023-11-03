@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class LoggingConsumer {
 
     public void consume(Event event) {
-        log.info("[Received] {}", event);
+        log.info("[ACK] {}", event);
     }
 
 }

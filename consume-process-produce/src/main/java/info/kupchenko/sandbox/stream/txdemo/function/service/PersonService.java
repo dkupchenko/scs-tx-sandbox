@@ -27,19 +27,19 @@ public class PersonService {
     public void createAndSend() {
         var person = update(new Person());
         sender.send(person);
-        log.info("[Sent] {}", person);
+        log.info("[SENT] {}", person);
     }
 
     @Transactional
     public void process(Person person) {
         log.info("[BEGIN] {}", person);
-        person = persons.save(update(person));
+        person = persons.save(person);
         sender.send(new Event(person));
         log.info("[END] {}", person);
-//        if(counter.get() % 2 == 0) {
-//            log.warn("[EXCEPTION] Some error is happen");
-//            throw new RuntimeException();
-//        }
+        if(counter.get() % 2 == 0) {
+            log.warn("[EXCEPTION] Some error is happen");
+            throw new RuntimeException();
+        }
     }
 
     private Person update(Person person) {
