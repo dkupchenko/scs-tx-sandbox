@@ -2,7 +2,7 @@ package info.kupchenko.sandbox.stream.txdemo.function.config;
 
 import info.kupchenko.sandbox.stream.txdemo.function.model.Event;
 import info.kupchenko.sandbox.stream.txdemo.function.model.Person;
-import info.kupchenko.sandbox.stream.txdemo.function.service.LoggingConsumer;
+import info.kupchenko.sandbox.stream.txdemo.function.service.LoggingEventConsumer;
 import info.kupchenko.sandbox.stream.txdemo.function.service.PersonService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class AppConfig {
     }
 
     @Bean
-    Consumer<Event> ackSendEvent(LoggingConsumer logger) {
+    Consumer<Event> ackSendEvent(LoggingEventConsumer logger) {
         return logger::consume;
     }
 }

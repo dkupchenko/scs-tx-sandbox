@@ -1,0 +1,28 @@
+spring.cloud:
+  function:
+    definition: "processPerson;ackSendEvent"
+  stream:
+    kafka:
+      binder:
+        replication-factor: 1
+        min-partition-count: 1
+        configuration:
+          isolation:
+            level: read_committed
+        transaction:
+          transaction-id-prefix: sandbox-tx-
+          producer.configuration:
+            max.request.size: 1024
+            retries: 2
+            acks: all
+    bindings:
+      sendPerson-out-0:
+        destination: demo.tx.out.send-person
+      processPerson-in-0:
+        destination: demo.tx.out.send-person
+        group: ackPersonGroup
+      sendEvent-out-0:
+        destination: demo.tx.out.send-event
+      ackSendEvent-in-0:
+        destination: demo.tx.out.send-event
+        group: ackEventGroup

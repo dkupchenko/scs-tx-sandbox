@@ -10,6 +10,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 @Data
 @Entity
 @Table(name = "PERSON")
@@ -22,7 +24,9 @@ public class Person {
     @Column(nullable = false, updatable = false)
     Long id;
 
+    @Column(name = "instance_id", nullable = false, updatable = false)
+    Long instanceId;
+
     @Column(nullable = false)
     String name;
-
 }

@@ -1,0 +1,1570 @@
+/usr/lib/jvm/java-17-openjdk-amd64/bin/java -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:/home/dmitry/progs/idea-IU-223.8836.41/lib/idea_rt.jar=32995:/home/dmitry/progs/idea-IU-223.8836.41/bin -Dfile.encoding=UTF-8 -classpath /home/dmitry/src/github/scs-tx-sandbox/consume-process-produce/target/classes:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.1.5/spring-boot-starter-data-jpa-3.1.5.jar:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.1.5/spring-boot-starter-aop-3.1.5.jar:/home/dmitry/.m2/repository/org/springframework/spring-aop/6.0.13/spring-aop-6.0.13.jar:/home/dmitry/.m2/repository/org/aspectj/aspectjweaver/1.9.20/aspectjweaver-1.9.20.jar:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.5/spring-boot-starter-jdbc-3.1.5.jar:/home/dmitry/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/home/dmitry/.m2/repository/org/springframework/spring-jdbc/6.0.13/spring-jdbc-6.0.13.jar:/home/dmitry/.m2/repository/org/hibernate/orm/hibernate-core/6.2.13.Final/hibernate-core-6.2.13.Final.jar:/home/dmitry/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/home/dmitry/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/home/dmitry/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/dmitry/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/home/dmitry/.m2/repository/io/smallrye/jandex/3.0.5/jandex-3.0.5.jar:/home/dmitry/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/dmitry/.m2/repository/net/bytebuddy/byte-buddy/1.14.9/byte-buddy-1.14.9.jar:/home/dmitry/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.3/jaxb-runtime-4.0.3.jar:/home/dmitry/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.3/jaxb-core-4.0.3.jar:/home/dmitry/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/home/dmitry/.m2/repository/org/glassfish/jaxb/txw2/4.0.3/txw2-4.0.3.jar:/home/dmitry/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/home/dmitry/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/home/dmitry/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/home/dmitry/.m2/repository/org/springframework/data/spring-data-jpa/3.1.5/spring-data-jpa-3.1.5.jar:/home/dmitry/.m2/repository/org/springframework/data/spring-data-commons/3.1.5/spring-data-commons-3.1.5.jar:/home/dmitry/.m2/repository/org/springframework/spring-orm/6.0.13/spring-orm-6.0.13.jar:/home/dmitry/.m2/repository/org/springframework/spring-beans/6.0.13/spring-beans-6.0.13.jar:/home/dmitry/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/dmitry/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/dmitry/.m2/repository/org/springframework/spring-aspects/6.0.13/spring-aspects-6.0.13.jar:/home/dmitry/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar:/home/dmitry/.m2/repository/org/springframework/cloud/spring-cloud-stream/4.0.4/spring-cloud-stream-4.0.4.jar:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.5/spring-boot-starter-validation-3.1.5.jar:/home/dmitry/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.15/tomcat-embed-el-10.1.15.jar:/home/dmitry/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/dmitry/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/dmitry/.m2/repository/org/springframework/spring-messaging/6.0.13/spring-messaging-6.0.13.jar:/home/dmitry/.m2/repository/org/springframework/integration/spring-integration-core/6.1.4/spring-integration-core-6.1.4.jar:/home/dmitry/.m2/repository/io/projectreactor/reactor-core/3.5.11/reactor-core-3.5.11.jar:/home/dmitry/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/home/dmitry/.m2/repository/org/springframework/integration/spring-integration-jmx/6.1.4/spring-integration-jmx-6.1.4.jar:/home/dmitry/.m2/repository/org/springframework/retry/spring-retry/2.0.4/spring-retry-2.0.4.jar:/home/dmitry/.m2/repository/org/springframework/cloud/spring-cloud-function-context/4.0.5/spring-cloud-function-context-4.0.5.jar:/home/dmitry/.m2/repository/net/jodah/typetools/0.6.2/typetools-0.6.2.jar:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.5/spring-boot-autoconfigure-3.1.5.jar:/home/dmitry/.m2/repository/org/springframework/cloud/spring-cloud-function-core/4.0.5/spring-cloud-function-core-4.0.5.jar:/home/dmitry/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/home/dmitry/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/home/dmitry/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/home/dmitry/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.8.22/kotlin-stdlib-jdk8-1.8.22.jar:/home/dmitry/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.8.22/kotlin-stdlib-1.8.22.jar:/home/dmitry/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.8.22/kotlin-stdlib-common-1.8.22.jar:/home/dmitry/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/home/dmitry/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.8.22/kotlin-stdlib-jdk7-1.8.22.jar:/home/dmitry/.m2/repository/org/springframework/cloud/spring-cloud-stream-binder-kafka/4.0.4/spring-cloud-stream-binder-kafka-4.0.4.jar:/home/dmitry/.m2/repository/org/springframework/cloud/spring-cloud-stream-binder-kafka-core/4.0.4/spring-cloud-stream-binder-kafka-core-4.0.4.jar:/home/dmitry/.m2/repository/org/springframework/integration/spring-integration-kafka/6.1.4/spring-integration-kafka-6.1.4.jar:/home/dmitry/.m2/repository/org/springframework/kafka/spring-kafka/3.0.12/spring-kafka-3.0.12.jar:/home/dmitry/.m2/repository/org/springframework/spring-context/6.0.13/spring-context-6.0.13.jar:/home/dmitry/.m2/repository/org/springframework/spring-expression/6.0.13/spring-expression-6.0.13.jar:/home/dmitry/.m2/repository/org/springframework/spring-tx/6.0.13/spring-tx-6.0.13.jar:/home/dmitry/.m2/repository/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar:/home/dmitry/.m2/repository/com/github/luben/zstd-jni/1.5.2-1/zstd-jni-1.5.2-1.jar:/home/dmitry/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/home/dmitry/.m2/repository/org/xerial/snappy/snappy-java/1.1.8.4/snappy-java-1.1.8.4.jar:/home/dmitry/.m2/repository/io/micrometer/micrometer-observation/1.11.5/micrometer-observation-1.11.5.jar:/home/dmitry/.m2/repository/io/micrometer/micrometer-commons/1.11.5/micrometer-commons-1.11.5.jar:/home/dmitry/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/dmitry/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.5/spring-boot-starter-3.1.5.jar:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot/3.1.5/spring-boot-3.1.5.jar:/home/dmitry/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.5/spring-boot-starter-logging-3.1.5.jar:/home/dmitry/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/dmitry/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/home/dmitry/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/home/dmitry/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/dmitry/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/home/dmitry/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/home/dmitry/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/home/dmitry/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/home/dmitry/.m2/repository/org/springframework/spring-core/6.0.13/spring-core-6.0.13.jar:/home/dmitry/.m2/repository/org/springframework/spring-jcl/6.0.13/spring-jcl-6.0.13.jar info.kupchenko.sandbox.stream.txdemo.function.FunctionApp
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.1.5)
+
+2023-11-05T15:47:51.307+03:00  INFO 157797 --- [           main] i.k.s.s.txdemo.function.FunctionApp      : Starting FunctionApp using Java 17.0.8.1 with PID 157797 (/home/dmitry/src/github/scs-tx-sandbox/consume-process-produce/target/classes started by dmitry in /home/dmitry/src/github/scs-tx-sandbox)
+2023-11-05T15:47:51.309+03:00  INFO 157797 --- [           main] i.k.s.s.txdemo.function.FunctionApp      : The following 1 profile is active: "nontx"
+2023-11-05T15:47:51.591+03:00  INFO 157797 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-05T15:47:51.662+03:00  INFO 157797 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interfaces.
+2023-11-05T15:47:51.740+03:00  INFO 157797 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-11-05T15:47:51.745+03:00  INFO 157797 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-11-05T15:47:51.896+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.902+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration' of type [org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.902+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'kafkaExtendedPropertiesDefaultMappingsProvider' of type [org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration$$Lambda$607/0x00007fd69c3beb30] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.903+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'BindingHandlerAdvise' of type [org.springframework.cloud.stream.config.BindingHandlerAdvise] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.909+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spelConverter' of type [org.springframework.cloud.stream.config.SpelExpressionConverterConfiguration$SpelConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.915+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties' of type [org.springframework.boot.autoconfigure.jmx.JmxProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.919+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.921+03:00  INFO 157797 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-11-05T15:47:51.983+03:00  INFO 157797 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-05T15:47:52.080+03:00  INFO 157797 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2023-11-05T15:47:52.081+03:00  INFO 157797 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-05T15:47:52.104+03:00  INFO 157797 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-05T15:47:52.135+03:00  INFO 157797 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-05T15:47:52.136+03:00  INFO 157797 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-05T15:47:52.282+03:00  INFO 157797 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-05T15:47:52.304+03:00  WARN 157797 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-11-05T15:47:52.832+03:00  INFO 157797 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-05T15:47:52.850+03:00  INFO 157797 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-05T15:47:53.054+03:00 TRACE 157797 --- [           main] t.a.AnnotationTransactionAttributeSource : Adding transactional method 'info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2023-11-05T15:47:53.251+03:00  INFO 157797 --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.processPerson-in-0' has 1 subscriber(s).
+2023-11-05T15:47:53.252+03:00  INFO 157797 --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.ackSendEvent-in-0' has 1 subscriber(s).
+2023-11-05T15:47:53.323+03:00  INFO 157797 --- [           main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel processPerson-in-0
+2023-11-05T15:47:53.328+03:00  INFO 157797 --- [           main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2023-11-05T15:47:53.331+03:00  INFO 157797 --- [           main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel ackSendEvent-in-0
+2023-11-05T15:47:53.332+03:00  INFO 157797 --- [           main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2023-11-05T15:47:53.337+03:00  INFO 157797 --- [           main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler _org.springframework.integration.errorLogger
+2023-11-05T15:47:53.343+03:00  INFO 157797 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-11-05T15:47:53.344+03:00  INFO 157797 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2023-11-05T15:47:53.344+03:00  INFO 157797 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2023-11-05T15:47:53.344+03:00  INFO 157797 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: kafka
+2023-11-05T15:47:53.344+03:00  INFO 157797 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for kafka
+2023-11-05T15:47:53.403+03:00  INFO 157797 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: kafka
+2023-11-05T15:47:53.409+03:00  INFO 157797 --- [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values:
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id =
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-05T15:47:53.442+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:53.442+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:53.442+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188473441
+2023-11-05T15:47:53.611+03:00  INFO 157797 --- [| adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2023-11-05T15:47:53.614+03:00  INFO 157797 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:47:53.614+03:00  INFO 157797 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:47:53.614+03:00  INFO 157797 --- [| adminclient-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:47:53.622+03:00  INFO 157797 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ackPersonGroup-1
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ackPersonGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 600000
+	max.poll.records = 50
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2023-11-05T15:47:53.644+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:53.644+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:53.644+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188473644
+2023-11-05T15:47:53.649+03:00  INFO 157797 --- [           main] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ackPersonGroup-1, groupId=ackPersonGroup] Cluster ID: bk1o-RkhREKc-IVBbINL1w
+2023-11-05T15:47:53.650+03:00  INFO 157797 --- [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-1, groupId=ackPersonGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-11-05T15:47:53.650+03:00  INFO 157797 --- [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-1, groupId=ackPersonGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-11-05T15:47:53.650+03:00  INFO 157797 --- [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:47:53.650+03:00  INFO 157797 --- [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:47:53.650+03:00  INFO 157797 --- [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:47:53.651+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-ackPersonGroup-1 unregistered
+2023-11-05T15:47:53.669+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.processPerson-in-0.errors' has 1 subscriber(s).
+2023-11-05T15:47:53.670+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.processPerson-in-0.errors' has 0 subscriber(s).
+2023-11-05T15:47:53.670+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.processPerson-in-0.errors' has 1 subscriber(s).
+2023-11-05T15:47:53.670+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.processPerson-in-0.errors' has 2 subscriber(s).
+2023-11-05T15:47:53.683+03:00  INFO 157797 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ackPersonGroup-2
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ackPersonGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 600000
+	max.poll.records = 50
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2023-11-05T15:47:53.685+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:53.685+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:53.685+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188473685
+2023-11-05T15:47:53.686+03:00  INFO 157797 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Subscribed to topic(s): demo.tx.out.send-person
+2023-11-05T15:47:53.689+03:00  INFO 157797 --- [           main] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@34766f4b
+2023-11-05T15:47:53.690+03:00  INFO 157797 --- [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values:
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id =
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-05T15:47:53.692+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:53.692+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:53.692+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188473692
+2023-11-05T15:47:53.694+03:00  INFO 157797 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Resetting the last seen epoch of partition demo.tx.out.send-person-0 to 0 since the associated topicId changed from null to RXeT_qPqQnaKR_mTBQg_YQ
+2023-11-05T15:47:53.694+03:00  INFO 157797 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Cluster ID: bk1o-RkhREKc-IVBbINL1w
+2023-11-05T15:47:53.695+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Discovered group coordinator kupchenko-nbU:9092 (id: 2147483647 rack: null)
+2023-11-05T15:47:53.696+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] (Re-)joining group
+2023-11-05T15:47:53.698+03:00  INFO 157797 --- [| adminclient-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-2 unregistered
+2023-11-05T15:47:53.699+03:00  INFO 157797 --- [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:47:53.699+03:00  INFO 157797 --- [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:47:53.699+03:00  INFO 157797 --- [| adminclient-2] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:47:53.700+03:00  INFO 157797 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ackEventGroup-3
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ackEventGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 600000
+	max.poll.records = 50
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2023-11-05T15:47:53.701+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:53.701+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:53.701+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188473701
+2023-11-05T15:47:53.703+03:00  INFO 157797 --- [           main] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ackEventGroup-3, groupId=ackEventGroup] Cluster ID: bk1o-RkhREKc-IVBbINL1w
+2023-11-05T15:47:53.703+03:00  INFO 157797 --- [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-3, groupId=ackEventGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-11-05T15:47:53.703+03:00  INFO 157797 --- [           main] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-3, groupId=ackEventGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-11-05T15:47:53.703+03:00  INFO 157797 --- [           main] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:47:53.703+03:00  INFO 157797 --- [           main] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:47:53.703+03:00  INFO 157797 --- [           main] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:47:53.704+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Request joining group due to: need to re-join with the given member-id: consumer-ackPersonGroup-2-d4588981-5580-4339-8c19-76df18919734
+2023-11-05T15:47:53.704+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-11-05T15:47:53.704+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] (Re-)joining group
+2023-11-05T15:47:53.704+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-ackEventGroup-3 unregistered
+2023-11-05T15:47:53.705+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Successfully joined group with generation Generation{generationId=71, memberId='consumer-ackPersonGroup-2-d4588981-5580-4339-8c19-76df18919734', protocol='range'}
+2023-11-05T15:47:53.706+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.ackSendEvent-in-0.errors' has 1 subscriber(s).
+2023-11-05T15:47:53.706+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.ackSendEvent-in-0.errors' has 0 subscriber(s).
+2023-11-05T15:47:53.706+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.ackSendEvent-in-0.errors' has 1 subscriber(s).
+2023-11-05T15:47:53.706+03:00  INFO 157797 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'kafka-851109385.ackSendEvent-in-0.errors' has 2 subscriber(s).
+2023-11-05T15:47:53.706+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Finished assignment for group at generation 71: {consumer-ackPersonGroup-2-d4588981-5580-4339-8c19-76df18919734=Assignment(partitions=[demo.tx.out.send-person-0])}
+2023-11-05T15:47:53.707+03:00  INFO 157797 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ackEventGroup-4
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ackEventGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_committed
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 600000
+	max.poll.records = 50
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2023-11-05T15:47:53.708+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:53.709+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:53.709+03:00  INFO 157797 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188473708
+2023-11-05T15:47:53.709+03:00  INFO 157797 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Subscribed to topic(s): demo.tx.out.send-event
+2023-11-05T15:47:53.709+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Successfully synced group in generation Generation{generationId=71, memberId='consumer-ackPersonGroup-2-d4588981-5580-4339-8c19-76df18919734', protocol='range'}
+2023-11-05T15:47:53.709+03:00  INFO 157797 --- [           main] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@26d02dc6
+2023-11-05T15:47:53.709+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Notifying assignor about the new Assignment(partitions=[demo.tx.out.send-person-0])
+2023-11-05T15:47:53.711+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Adding newly assigned partitions: demo.tx.out.send-person-0
+2023-11-05T15:47:53.711+03:00  INFO 157797 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Resetting the last seen epoch of partition demo.tx.out.send-event-0 to 0 since the associated topicId changed from null to 9MBkJ74VTHO4e95TSUpw1A
+2023-11-05T15:47:53.712+03:00  INFO 157797 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Cluster ID: bk1o-RkhREKc-IVBbINL1w
+2023-11-05T15:47:53.713+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Discovered group coordinator kupchenko-nbU:9092 (id: 2147483647 rack: null)
+2023-11-05T15:47:53.713+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] (Re-)joining group
+2023-11-05T15:47:53.715+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Request joining group due to: need to re-join with the given member-id: consumer-ackEventGroup-4-88ebcce2-5f8d-41e6-b5e5-953c816736d9
+2023-11-05T15:47:53.715+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-11-05T15:47:53.715+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] (Re-)joining group
+2023-11-05T15:47:53.716+03:00  INFO 157797 --- [           main] i.k.s.s.txdemo.function.FunctionApp      : Started FunctionApp in 2.714 seconds (process running for 3.063)
+2023-11-05T15:47:53.716+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Successfully joined group with generation Generation{generationId=43, memberId='consumer-ackEventGroup-4-88ebcce2-5f8d-41e6-b5e5-953c816736d9', protocol='range'}
+2023-11-05T15:47:53.716+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Finished assignment for group at generation 43: {consumer-ackEventGroup-4-88ebcce2-5f8d-41e6-b5e5-953c816736d9=Assignment(partitions=[demo.tx.out.send-event-0])}
+2023-11-05T15:47:53.717+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Setting offset for partition demo.tx.out.send-person-0 to the committed offset FetchPosition{offset=200, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kupchenko-nbU:9092 (id: 0 rack: null)], epoch=0}}
+2023-11-05T15:47:53.717+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Successfully synced group in generation Generation{generationId=43, memberId='consumer-ackEventGroup-4-88ebcce2-5f8d-41e6-b5e5-953c816736d9', protocol='range'}
+2023-11-05T15:47:53.717+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Notifying assignor about the new Assignment(partitions=[demo.tx.out.send-event-0])
+2023-11-05T15:47:53.717+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Adding newly assigned partitions: demo.tx.out.send-event-0
+2023-11-05T15:47:53.718+03:00  INFO 157797 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : ackPersonGroup: partitions assigned: [demo.tx.out.send-person-0]
+2023-11-05T15:47:53.718+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Setting offset for partition demo.tx.out.send-event-0 to the committed offset FetchPosition{offset=122, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kupchenko-nbU:9092 (id: 0 rack: null)], epoch=0}}
+2023-11-05T15:47:53.718+03:00  INFO 157797 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : ackEventGroup: partitions assigned: [demo.tx.out.send-event-0]
+2023-11-05T15:47:54.719+03:00  INFO 157797 --- [   scheduling-1] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: demo.tx.out.send-person
+2023-11-05T15:47:54.720+03:00  INFO 157797 --- [   scheduling-1] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values:
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id =
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-05T15:47:54.722+03:00  INFO 157797 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:54.722+03:00  INFO 157797 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:54.722+03:00  INFO 157797 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188474722
+2023-11-05T15:47:54.731+03:00  INFO 157797 --- [| adminclient-3] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-3 unregistered
+2023-11-05T15:47:54.732+03:00  INFO 157797 --- [| adminclient-3] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:47:54.732+03:00  INFO 157797 --- [| adminclient-3] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:47:54.732+03:00  INFO 157797 --- [| adminclient-3] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:47:54.737+03:00  INFO 157797 --- [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : Idempotence will be disabled because acks is set to 1, not set to 'all'.
+2023-11-05T15:47:54.737+03:00  INFO 157797 --- [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values:
+	acks = 1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2023-11-05T15:47:54.745+03:00  INFO 157797 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:54.745+03:00  INFO 157797 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:54.745+03:00  INFO 157797 --- [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188474745
+2023-11-05T15:47:54.746+03:00 DEBUG 157797 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : Created new Producer: CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da]
+2023-11-05T15:47:54.747+03:00  INFO 157797 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition demo.tx.out.send-person-0 to 0 since the associated topicId changed from null to RXeT_qPqQnaKR_mTBQg_YQ
+2023-11-05T15:47:54.747+03:00  INFO 157797 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: bk1o-RkhREKc-IVBbINL1w
+2023-11-05T15:47:54.748+03:00 TRACE 157797 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] close(null)
+2023-11-05T15:47:54.751+03:00  INFO 157797 --- [   scheduling-1] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2023-11-05T15:47:54.781+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@5b2a6135, timestamp=null)
+2023-11-05T15:47:54.782+03:00 TRACE 157797 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] send(ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@5b2a6135, timestamp=null))
+2023-11-05T15:47:54.785+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@5b2a6135, timestamp=null)
+2023-11-05T15:47:54.785+03:00  INFO 157797 --- [   scheduling-1] i.k.s.s.t.f.service.PersonGenerator      : [SENT] Person(id=null, instanceId=0, name=John Smith)
+2023-11-05T15:47:54.791+03:00 TRACE 157797 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@5b2a6135, timestamp=null), metadata: demo.tx.out.send-person-0@201
+2023-11-05T15:47:54.791+03:00 TRACE 157797 --- [ad | producer-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] close(PT5S)
+2023-11-05T15:47:54.819+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:47:54.819+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=0, name=John Smith)
+2023-11-05T15:47:54.820+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:47:54.880+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:47:54.880+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=0
+2023-11-05T15:47:54.881+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:47:54.890+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:47:54.891+03:00  INFO 157797 --- [container-0-C-1] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: demo.tx.out.send-event
+2023-11-05T15:47:54.891+03:00  INFO 157797 --- [container-0-C-1] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values:
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id =
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2023-11-05T15:47:54.892+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:54.892+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:54.892+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188474892
+2023-11-05T15:47:54.897+03:00  INFO 157797 --- [| adminclient-4] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-4 unregistered
+2023-11-05T15:47:54.897+03:00  INFO 157797 --- [| adminclient-4] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:47:54.897+03:00  INFO 157797 --- [| adminclient-4] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:47:54.897+03:00  INFO 157797 --- [| adminclient-4] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:47:54.898+03:00  INFO 157797 --- [container-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values:
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1024
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2023-11-05T15:47:54.901+03:00  INFO 157797 --- [container-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-2] Instantiated an idempotent producer.
+2023-11-05T15:47:54.903+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.4.1
+2023-11-05T15:47:54.903+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 8a516edc2755df89
+2023-11-05T15:47:54.903+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1699188474903
+2023-11-05T15:47:54.903+03:00 DEBUG 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : Created new Producer: CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770]
+2023-11-05T15:47:54.905+03:00  INFO 157797 --- [ad | producer-2] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-2] Resetting the last seen epoch of partition demo.tx.out.send-event-0 to 0 since the associated topicId changed from null to 9MBkJ74VTHO4e95TSUpw1A
+2023-11-05T15:47:54.906+03:00  INFO 157797 --- [ad | producer-2] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-2] Cluster ID: bk1o-RkhREKc-IVBbINL1w
+2023-11-05T15:47:54.906+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(null)
+2023-11-05T15:47:54.906+03:00  INFO 157797 --- [ad | producer-2] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-2] ProducerId set to 1004 with epoch 0
+2023-11-05T15:47:54.906+03:00  INFO 157797 --- [container-0-C-1] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2023-11-05T15:47:54.908+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@63f550d7, timestamp=null)
+2023-11-05T15:47:54.908+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@63f550d7, timestamp=null))
+2023-11-05T15:47:54.908+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@63f550d7, timestamp=null)
+2023-11-05T15:47:54.908+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [END] Saved Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:47:54.908+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:47:54.912+03:00 TRACE 157797 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@63f550d7, timestamp=null), metadata: demo.tx.out.send-event-0@123
+2023-11-05T15:47:54.912+03:00 TRACE 157797 --- [ad | producer-2] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:47:54.914+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.s.LoggingEventConsumer       : [ACK] Event(personId=1, info=Person(id=1, instanceId=0, name=John Smith))
+
+
+
+
+2023-11-05T15:48:14.787+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@1c045bbd, timestamp=null)
+2023-11-05T15:48:14.787+03:00 TRACE 157797 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] send(ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@1c045bbd, timestamp=null))
+2023-11-05T15:48:14.788+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@1c045bbd, timestamp=null)
+2023-11-05T15:48:14.788+03:00  INFO 157797 --- [   scheduling-1] i.k.s.s.t.f.service.PersonGenerator      : [SENT] Person(id=null, instanceId=1, name=John Smith)
+2023-11-05T15:48:14.790+03:00 TRACE 157797 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@1c045bbd, timestamp=null), metadata: demo.tx.out.send-person-0@202
+2023-11-05T15:48:14.790+03:00 TRACE 157797 --- [ad | producer-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] close(PT5S)
+2023-11-05T15:48:14.793+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:14.793+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=1, name=John Smith)
+2023-11-05T15:48:14.793+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:14.802+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:14.802+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=1
+2023-11-05T15:48:14.802+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:48:14.802+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:14.803+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:14.804+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@28e36a50, timestamp=null)
+2023-11-05T15:48:14.804+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@28e36a50, timestamp=null))
+2023-11-05T15:48:14.804+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@28e36a50, timestamp=null)
+2023-11-05T15:48:14.804+03:00  WARN 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [EXCEPTION] Some error is happen
+2023-11-05T15:48:14.804+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process] after exception: java.lang.RuntimeException
+2023-11-05T15:48:14.806+03:00 TRACE 157797 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@28e36a50, timestamp=null), metadata: demo.tx.out.send-event-0@124
+2023-11-05T15:48:14.806+03:00 TRACE 157797 --- [ad | producer-2] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:48:14.807+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.s.LoggingEventConsumer       : [ACK] Event(personId=2, info=Person(id=2, instanceId=1, name=John Smith))
+2023-11-05T15:48:15.808+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:15.808+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=1, name=John Smith)
+2023-11-05T15:48:15.808+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:15.811+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:15.811+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=1
+2023-11-05T15:48:15.811+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:48:15.811+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:15.811+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:15.812+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@4f1b5bb0, timestamp=null)
+2023-11-05T15:48:15.813+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@4f1b5bb0, timestamp=null))
+2023-11-05T15:48:15.813+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@4f1b5bb0, timestamp=null)
+2023-11-05T15:48:15.813+03:00  WARN 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [EXCEPTION] Some error is happen
+2023-11-05T15:48:15.813+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process] after exception: java.lang.RuntimeException
+2023-11-05T15:48:15.816+03:00 TRACE 157797 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@4f1b5bb0, timestamp=null), metadata: demo.tx.out.send-event-0@125
+2023-11-05T15:48:15.816+03:00 TRACE 157797 --- [ad | producer-2] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:48:15.818+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.s.LoggingEventConsumer       : [ACK] Event(personId=3, info=Person(id=3, instanceId=1, name=John Smith))
+2023-11-05T15:48:17.815+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:17.815+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=1, name=John Smith)
+2023-11-05T15:48:17.816+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:17.818+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:17.818+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=1
+2023-11-05T15:48:17.818+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:48:17.819+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:17.819+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:17.820+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@111fc99e, timestamp=null)
+2023-11-05T15:48:17.820+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@111fc99e, timestamp=null))
+2023-11-05T15:48:17.821+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@111fc99e, timestamp=null)
+2023-11-05T15:48:17.821+03:00  WARN 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [EXCEPTION] Some error is happen
+2023-11-05T15:48:17.821+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process] after exception: java.lang.RuntimeException
+2023-11-05T15:48:17.823+03:00 TRACE 157797 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@111fc99e, timestamp=null), metadata: demo.tx.out.send-event-0@126
+2023-11-05T15:48:17.823+03:00 TRACE 157797 --- [ad | producer-2] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:48:17.825+03:00 ERROR 157797 --- [container-0-C-1] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1@4b8c7ef0], failedMessage=GenericMessage [payload=byte[46], headers={kafka_offset=202, scst_nativeHeadersPresent=true, kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@1cc35111, deliveryAttempt=3, kafka_timestampType=CREATE_TIME, kafka_receivedPartitionId=0, contentType=application/json, kafka_receivedTopic=demo.tx.out.send-person, kafka_receivedTimestamp=1699188494787, kafka_groupId=ackPersonGroup, target-protocol=kafka}]
+	at org.springframework.integration.support.utils.IntegrationUtils.wrapInHandlingExceptionIfNecessary(IntegrationUtils.java:191)
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:108)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	at org.springframework.integration.channel.AbstractMessageChannel.sendInternal(AbstractMessageChannel.java:375)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:329)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:299)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109)
+	at org.springframework.integration.endpoint.MessageProducerSupport.lambda$sendMessage$1(MessageProducerSupport.java:262)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.integration.endpoint.MessageProducerSupport.sendMessage(MessageProducerSupport.java:262)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.sendMessageIfAny(KafkaMessageDrivenChannelAdapter.java:394)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.lambda$onMessage$0(KafkaMessageDrivenChannelAdapter.java:464)
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.lambda$doWithRetry$0(KafkaInboundEndpoint.java:70)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:225)
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.doWithRetry(KafkaInboundEndpoint.java:66)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:461)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:425)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2873)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2854)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$57(KafkaMessageListenerContainer.java:2772)
+	at io.micrometer.observation.Observation.lambda$observe$4(Observation.java:544)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:544)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2770)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2622)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2508)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2150)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1505)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1469)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1344)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.RuntimeException
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process(PersonService.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService$$SpringCGLIB$$0.process(<generated>)
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.invokeConsumer(SimpleFunctionRegistry.java:1029)
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.doApply(SimpleFunctionRegistry.java:731)
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.apply(SimpleFunctionRegistry.java:577)
+	at org.springframework.cloud.stream.function.PartitionAwareFunctionWrapper.apply(PartitionAwareFunctionWrapper.java:92)
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionWrapper.apply(FunctionConfiguration.java:832)
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.handleMessageInternal(FunctionConfiguration.java:661)
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105)
+	... 40 more
+
+2023-11-05T15:48:17.826+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.s.LoggingEventConsumer       : [ACK] Event(personId=4, info=Person(id=4, instanceId=1, name=John Smith))
+2023-11-05T15:48:17.831+03:00 ERROR 157797 --- [container-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff none exhausted for demo.tx.out.send-person-0@202
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2946) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2887) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2854) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$57(KafkaMessageListenerContainer.java:2772) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at io.micrometer.observation.Observation.lambda$observe$4(Observation.java:544) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observe(Observation.java:544) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2770) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2622) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2508) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2150) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1505) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1469) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1344) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.KafkaException: Failed to execute runnable
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.doWithRetry(KafkaInboundEndpoint.java:75) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:461) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:425) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2873) ~[spring-kafka-3.0.12.jar:3.0.12]
+	... 14 common frames omitted
+Caused by: org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1@4b8c7ef0]
+	at org.springframework.integration.support.utils.IntegrationUtils.wrapInHandlingExceptionIfNecessary(IntegrationUtils.java:191) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:108) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.sendInternal(AbstractMessageChannel.java:375) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:329) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:299) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.integration.endpoint.MessageProducerSupport.lambda$sendMessage$1(MessageProducerSupport.java:262) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observe(Observation.java:492) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at org.springframework.integration.endpoint.MessageProducerSupport.sendMessage(MessageProducerSupport.java:262) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.sendMessageIfAny(KafkaMessageDrivenChannelAdapter.java:394) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.lambda$onMessage$0(KafkaMessageDrivenChannelAdapter.java:464) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.lambda$doWithRetry$0(KafkaInboundEndpoint.java:70) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329) ~[spring-retry-2.0.4.jar:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:225) ~[spring-retry-2.0.4.jar:na]
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.doWithRetry(KafkaInboundEndpoint.java:66) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	... 17 common frames omitted
+Caused by: java.lang.RuntimeException: null
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process(PersonService.java:40) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService$$SpringCGLIB$$0.process(<generated>) ~[classes/:na]
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.invokeConsumer(SimpleFunctionRegistry.java:1029) ~[spring-cloud-function-context-4.0.5.jar:4.0.5]
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.doApply(SimpleFunctionRegistry.java:731) ~[spring-cloud-function-context-4.0.5.jar:4.0.5]
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.apply(SimpleFunctionRegistry.java:577) ~[spring-cloud-function-context-4.0.5.jar:4.0.5]
+	at org.springframework.cloud.stream.function.PartitionAwareFunctionWrapper.apply(PartitionAwareFunctionWrapper.java:92) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionWrapper.apply(FunctionConfiguration.java:832) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.handleMessageInternal(FunctionConfiguration.java:661) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	... 40 common frames omitted
+
+
+
+
+
+
+
+2023-11-05T15:48:34.789+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@28c0d808, timestamp=null)
+2023-11-05T15:48:34.789+03:00 TRACE 157797 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] send(ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@28c0d808, timestamp=null))
+2023-11-05T15:48:34.790+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@28c0d808, timestamp=null)
+2023-11-05T15:48:34.790+03:00  INFO 157797 --- [   scheduling-1] i.k.s.s.t.f.service.PersonGenerator      : [SENT] Person(id=null, instanceId=2, name=John Smith)
+2023-11-05T15:48:34.792+03:00 TRACE 157797 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@28c0d808, timestamp=null), metadata: demo.tx.out.send-person-0@203
+2023-11-05T15:48:34.792+03:00 TRACE 157797 --- [ad | producer-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] close(PT5S)
+2023-11-05T15:48:34.795+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:34.796+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=2, name=John Smith)
+2023-11-05T15:48:34.796+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:34.799+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:34.799+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=1
+2023-11-05T15:48:34.800+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:48:34.800+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:34.800+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:34.801+03:00  WARN 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [ERROR] Some kafka error happen
+2023-11-05T15:48:34.802+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@339c4288, timestamp=null)
+2023-11-05T15:48:34.803+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@339c4288, timestamp=null))
+2023-11-05T15:48:34.803+03:00 ERROR 157797 --- [container-0-C-1] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='null' and payload='byte[1095]' to topic demo.tx.out.send-event:
+
+org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+2023-11-05T15:48:34.804+03:00 DEBUG 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Failed to send: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@339c4288, timestamp=null)
+
+org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+2023-11-05T15:48:34.804+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:48:34.805+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process] after exception: org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler@4656c0ba], failedMessage=GenericMessage [payload=byte[1095], headers={id=faba6d26-4211-74ca-024b-015024b34186, contentType=application/json, target-protocol=kafka, timestamp=1699188514802}]
+2023-11-05T15:48:35.807+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:35.807+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=2, name=John Smith)
+2023-11-05T15:48:35.807+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:35.809+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:35.810+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=1
+2023-11-05T15:48:35.810+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:48:35.810+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:35.810+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:35.810+03:00  WARN 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [ERROR] Some kafka error happen
+2023-11-05T15:48:35.811+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@1a96503f, timestamp=null)
+2023-11-05T15:48:35.811+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@1a96503f, timestamp=null))
+2023-11-05T15:48:35.812+03:00 ERROR 157797 --- [container-0-C-1] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='null' and payload='byte[1095]' to topic demo.tx.out.send-event:
+
+org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+2023-11-05T15:48:35.812+03:00 DEBUG 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Failed to send: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@1a96503f, timestamp=null)
+
+org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+2023-11-05T15:48:35.812+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:48:35.813+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process] after exception: org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler@4656c0ba], failedMessage=GenericMessage [payload=byte[1095], headers={id=c25b2b89-9ff6-7782-2648-17eaba9a2627, contentType=application/json, target-protocol=kafka, timestamp=1699188515811}]
+2023-11-05T15:48:37.814+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:37.815+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=2, name=John Smith)
+2023-11-05T15:48:37.815+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:37.817+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:37.817+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=1
+2023-11-05T15:48:37.817+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:48:37.818+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:37.818+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:37.818+03:00  WARN 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [ERROR] Some kafka error happen
+2023-11-05T15:48:37.819+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@7c78a91d, timestamp=null)
+2023-11-05T15:48:37.820+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@7c78a91d, timestamp=null))
+2023-11-05T15:48:37.820+03:00 ERROR 157797 --- [container-0-C-1] o.s.k.support.LoggingProducerListener    : Exception thrown when sending a message with key='null' and payload='byte[1095]' to topic demo.tx.out.send-event:
+
+org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+2023-11-05T15:48:37.820+03:00 DEBUG 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Failed to send: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@7c78a91d, timestamp=null)
+
+org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+2023-11-05T15:48:37.820+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:48:37.821+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process] after exception: org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler@4656c0ba], failedMessage=GenericMessage [payload=byte[1095], headers={id=308cf581-1950-30e3-55c6-2f0d41720571, contentType=application/json, target-protocol=kafka, timestamp=1699188517819}]
+2023-11-05T15:48:37.822+03:00 ERROR 157797 --- [container-0-C-1] o.s.integration.handler.LoggingHandler   : org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler@4656c0ba], failedMessage=GenericMessage [payload=byte[1095], headers={id=308cf581-1950-30e3-55c6-2f0d41720571, contentType=application/json, target-protocol=kafka, timestamp=1699188517819}]
+	at org.springframework.integration.support.utils.IntegrationUtils.wrapInHandlingExceptionIfNecessary(IntegrationUtils.java:191)
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:108)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73)
+	at org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler.handleMessage(KafkaMessageChannelBinder.java:1594)
+	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder$SendingHandler.handleMessageInternal(AbstractMessageChannelBinder.java:1185)
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	at org.springframework.integration.channel.AbstractMessageChannel.sendInternal(AbstractMessageChannel.java:375)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:329)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:299)
+	at org.springframework.cloud.stream.function.StreamBridge.send(StreamBridge.java:187)
+	at org.springframework.cloud.stream.function.StreamBridge.send(StreamBridge.java:146)
+	at org.springframework.cloud.stream.function.StreamBridge.send(StreamBridge.java:141)
+	at info.kupchenko.sandbox.stream.txdemo.function.service.StreamBridgeSender.send(StreamBridgeSender.java:26)
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process(PersonService.java:44)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703)
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService$$SpringCGLIB$$0.process(<generated>)
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.invokeConsumer(SimpleFunctionRegistry.java:1029)
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.doApply(SimpleFunctionRegistry.java:731)
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.apply(SimpleFunctionRegistry.java:577)
+	at org.springframework.cloud.stream.function.PartitionAwareFunctionWrapper.apply(PartitionAwareFunctionWrapper.java:92)
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionWrapper.apply(FunctionConfiguration.java:832)
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.handleMessageInternal(FunctionConfiguration.java:661)
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105)
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73)
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133)
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106)
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72)
+	at org.springframework.integration.channel.AbstractMessageChannel.sendInternal(AbstractMessageChannel.java:375)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:329)
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:299)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166)
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47)
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109)
+	at org.springframework.integration.endpoint.MessageProducerSupport.lambda$sendMessage$1(MessageProducerSupport.java:262)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.integration.endpoint.MessageProducerSupport.sendMessage(MessageProducerSupport.java:262)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.sendMessageIfAny(KafkaMessageDrivenChannelAdapter.java:394)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.lambda$onMessage$0(KafkaMessageDrivenChannelAdapter.java:464)
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.lambda$doWithRetry$0(KafkaInboundEndpoint.java:70)
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329)
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:225)
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.doWithRetry(KafkaInboundEndpoint.java:66)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:461)
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:425)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2873)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2854)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$57(KafkaMessageListenerContainer.java:2772)
+	at io.micrometer.observation.Observation.lambda$observe$4(Observation.java:544)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:544)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2770)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2622)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2508)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2150)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1505)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1469)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1344)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.springframework.kafka.KafkaException: Send failed
+	at org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:797)
+	at org.springframework.kafka.core.KafkaTemplate.observeSend(KafkaTemplate.java:754)
+	at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:564)
+	at org.springframework.integration.kafka.outbound.KafkaProducerMessageHandler.handleRequestMessage(KafkaProducerMessageHandler.java:532)
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:136)
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105)
+	... 79 more
+Caused by: org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+2023-11-05T15:48:37.823+03:00 ERROR 157797 --- [container-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff none exhausted for demo.tx.out.send-person-0@203
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener failed
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2946) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2887) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2854) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$57(KafkaMessageListenerContainer.java:2772) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at io.micrometer.observation.Observation.lambda$observe$4(Observation.java:544) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observe(Observation.java:544) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2770) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2622) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2508) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2150) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1505) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1469) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1344) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.KafkaException: Failed to execute runnable
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.doWithRetry(KafkaInboundEndpoint.java:75) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:461) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.onMessage(KafkaMessageDrivenChannelAdapter.java:425) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2873) ~[spring-kafka-3.0.12.jar:3.0.12]
+	... 14 common frames omitted
+Caused by: org.springframework.messaging.MessageHandlingException: error occurred in message handler [org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler@4656c0ba]
+	at org.springframework.integration.support.utils.IntegrationUtils.wrapInHandlingExceptionIfNecessary(IntegrationUtils.java:191) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:108) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.cloud.stream.binder.kafka.KafkaMessageChannelBinder$ProducerConfigurationMessageHandler.handleMessage(KafkaMessageChannelBinder.java:1594) ~[spring-cloud-stream-binder-kafka-4.0.4.jar:4.0.4]
+	at org.springframework.cloud.stream.binder.AbstractMessageChannelBinder$SendingHandler.handleMessageInternal(AbstractMessageChannelBinder.java:1185) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.sendInternal(AbstractMessageChannel.java:375) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:329) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:299) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.cloud.stream.function.StreamBridge.send(StreamBridge.java:187) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.cloud.stream.function.StreamBridge.send(StreamBridge.java:146) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.cloud.stream.function.StreamBridge.send(StreamBridge.java:141) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at info.kupchenko.sandbox.stream.txdemo.function.service.StreamBridgeSender.send(StreamBridgeSender.java:26) ~[classes/:na]
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process(PersonService.java:44) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:751) ~[spring-aop-6.0.13.jar:6.0.13]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:703) ~[spring-aop-6.0.13.jar:6.0.13]
+	at info.kupchenko.sandbox.stream.txdemo.function.service.PersonService$$SpringCGLIB$$0.process(<generated>) ~[classes/:na]
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.invokeConsumer(SimpleFunctionRegistry.java:1029) ~[spring-cloud-function-context-4.0.5.jar:4.0.5]
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.doApply(SimpleFunctionRegistry.java:731) ~[spring-cloud-function-context-4.0.5.jar:4.0.5]
+	at org.springframework.cloud.function.context.catalog.SimpleFunctionRegistry$FunctionInvocationWrapper.apply(SimpleFunctionRegistry.java:577) ~[spring-cloud-function-context-4.0.5.jar:4.0.5]
+	at org.springframework.cloud.stream.function.PartitionAwareFunctionWrapper.apply(PartitionAwareFunctionWrapper.java:92) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionWrapper.apply(FunctionConfiguration.java:832) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.cloud.stream.function.FunctionConfiguration$FunctionToDestinationBinder$1.handleMessageInternal(FunctionConfiguration.java:661) ~[spring-cloud-stream-4.0.4.jar:4.0.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.handleMessage(AbstractMessageHandler.java:73) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.AbstractDispatcher.tryOptimizedDispatch(AbstractDispatcher.java:115) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.doDispatch(UnicastingDispatcher.java:133) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.dispatcher.UnicastingDispatcher.dispatch(UnicastingDispatcher.java:106) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractSubscribableChannel.doSend(AbstractSubscribableChannel.java:72) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.sendInternal(AbstractMessageChannel.java:375) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:329) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.channel.AbstractMessageChannel.send(AbstractMessageChannel.java:299) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:187) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:166) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.messaging.core.GenericMessagingTemplate.doSend(GenericMessagingTemplate.java:47) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.messaging.core.AbstractMessageSendingTemplate.send(AbstractMessageSendingTemplate.java:109) ~[spring-messaging-6.0.13.jar:6.0.13]
+	at org.springframework.integration.endpoint.MessageProducerSupport.lambda$sendMessage$1(MessageProducerSupport.java:262) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at io.micrometer.observation.Observation.observe(Observation.java:492) ~[micrometer-observation-1.11.5.jar:1.11.5]
+	at org.springframework.integration.endpoint.MessageProducerSupport.sendMessage(MessageProducerSupport.java:262) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter.sendMessageIfAny(KafkaMessageDrivenChannelAdapter.java:394) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter$IntegrationRecordMessageListener.lambda$onMessage$0(KafkaMessageDrivenChannelAdapter.java:464) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.lambda$doWithRetry$0(KafkaInboundEndpoint.java:70) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:329) ~[spring-retry-2.0.4.jar:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:225) ~[spring-retry-2.0.4.jar:na]
+	at org.springframework.integration.kafka.inbound.KafkaInboundEndpoint.doWithRetry(KafkaInboundEndpoint.java:66) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	... 17 common frames omitted
+Caused by: org.springframework.kafka.KafkaException: Send failed
+	at org.springframework.kafka.core.KafkaTemplate.doSend(KafkaTemplate.java:797) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.core.KafkaTemplate.observeSend(KafkaTemplate.java:754) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.kafka.core.KafkaTemplate.send(KafkaTemplate.java:564) ~[spring-kafka-3.0.12.jar:3.0.12]
+	at org.springframework.integration.kafka.outbound.KafkaProducerMessageHandler.handleRequestMessage(KafkaProducerMessageHandler.java:532) ~[spring-integration-kafka-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractReplyProducingMessageHandler.handleMessageInternal(AbstractReplyProducingMessageHandler.java:136) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	at org.springframework.integration.handler.AbstractMessageHandler.doHandleMessage(AbstractMessageHandler.java:105) ~[spring-integration-core-6.1.4.jar:6.1.4]
+	... 79 common frames omitted
+Caused by: org.apache.kafka.common.errors.RecordTooLargeException: The message is 1330 bytes when serialized which is larger than 1024, which is the value of the max.request.size configuration.
+
+
+
+
+
+
+
+
+2023-11-05T15:48:54.791+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@f1f4872, timestamp=null)
+2023-11-05T15:48:54.791+03:00 TRACE 157797 --- [   scheduling-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] send(ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@f1f4872, timestamp=null))
+2023-11-05T15:48:54.792+03:00 TRACE 157797 --- [   scheduling-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@f1f4872, timestamp=null)
+2023-11-05T15:48:54.792+03:00  INFO 157797 --- [   scheduling-1] i.k.s.s.t.f.service.PersonGenerator      : [SENT] Person(id=null, instanceId=3, name=John Smith)
+2023-11-05T15:48:54.794+03:00 TRACE 157797 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-person, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@f1f4872, timestamp=null), metadata: demo.tx.out.send-person-0@204
+2023-11-05T15:48:54.794+03:00 TRACE 157797 --- [ad | producer-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@2d811da] close(PT5S)
+2023-11-05T15:48:54.796+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:54.796+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [BEGIN] Incoming Person(id=null, instanceId=3, name=John Smith)
+2023-11-05T15:48:54.797+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:54.799+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll]
+2023-11-05T15:48:54.799+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] db size=1
+2023-11-05T15:48:54.799+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [DUMP] Person(id=1, instanceId=0, name=John Smith)
+2023-11-05T15:48:54.799+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:54.800+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.save]
+2023-11-05T15:48:54.801+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@672d2288, timestamp=null)
+2023-11-05T15:48:54.801+03:00 TRACE 157797 --- [container-0-C-1] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] send(ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = false), key=null, value=[B@672d2288, timestamp=null))
+2023-11-05T15:48:54.801+03:00 TRACE 157797 --- [container-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@672d2288, timestamp=null)
+2023-11-05T15:48:54.801+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.service.PersonService        : [END] Saved Person(id=8, instanceId=3, name=John Smith)
+2023-11-05T15:48:54.801+03:00 TRACE 157797 --- [container-0-C-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [info.kupchenko.sandbox.stream.txdemo.function.service.PersonService.process]
+2023-11-05T15:48:54.804+03:00 TRACE 157797 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=demo.tx.out.send-event, partition=null, headers=RecordHeaders(headers = [RecordHeader(key = contentType, value = [97, 112, 112, 108, 105, 99, 97, 116, 105, 111, 110, 47, 106, 115, 111, 110]), RecordHeader(key = target-protocol, value = [107, 97, 102, 107, 97]), RecordHeader(key = spring_json_header_types, value = [123, 34, 99, 111, 110, 116, 101, 110, 116, 84, 121, 112, 101, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 44, 34, 116, 97, 114, 103, 101, 116, 45, 112, 114, 111, 116, 111, 99, 111, 108, 34, 58, 34, 106, 97, 118, 97, 46, 108, 97, 110, 103, 46, 83, 116, 114, 105, 110, 103, 34, 125])], isReadOnly = true), key=null, value=[B@672d2288, timestamp=null), metadata: demo.tx.out.send-event-0@127
+2023-11-05T15:48:54.804+03:00 TRACE 157797 --- [ad | producer-2] o.s.k.core.DefaultKafkaProducerFactory   : CloseSafeProducer [delegate=org.apache.kafka.clients.producer.KafkaProducer@29367770] close(PT5S)
+2023-11-05T15:48:54.807+03:00  INFO 157797 --- [container-0-C-1] i.k.s.s.t.f.s.LoggingEventConsumer       : [ACK] Event(personId=8, info=Person(id=8, instanceId=3, name=John Smith))
+
+
+
+2023-11-05T15:48:59.825+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Revoke previously assigned partitions demo.tx.out.send-person-0
+2023-11-05T15:48:59.826+03:00  INFO 157797 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : ackPersonGroup: partitions revoked: [demo.tx.out.send-person-0]
+2023-11-05T15:48:59.826+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Member consumer-ackPersonGroup-2-d4588981-5580-4339-8c19-76df18919734 sending LeaveGroup request to coordinator kupchenko-nbU:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-11-05T15:48:59.826+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.826+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.827+03:00  INFO 157797 --- [container-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Unsubscribed all topics or patterns and assigned partitions
+2023-11-05T15:48:59.827+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.827+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackPersonGroup-2, groupId=ackPersonGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.828+03:00  INFO 157797 --- [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:48:59.828+03:00  INFO 157797 --- [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:48:59.828+03:00  INFO 157797 --- [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:48:59.829+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-ackPersonGroup-2 unregistered
+2023-11-05T15:48:59.829+03:00  INFO 157797 --- [container-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ackPersonGroup: Consumer stopped
+2023-11-05T15:48:59.830+03:00  INFO 157797 --- [ionShutdownHook] s.i.k.i.KafkaMessageDrivenChannelAdapter : stopped org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@34766f4b
+2023-11-05T15:48:59.839+03:00  INFO 157797 --- [ionShutdownHook] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel kafka-851109385.processPerson-in-0.errors
+2023-11-05T15:48:59.845+03:00  INFO 157797 --- [ionShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application.kafka-851109385.processPerson-in-0.errors' has 1 subscriber(s).
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Revoke previously assigned partitions demo.tx.out.send-event-0
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : ackEventGroup: partitions revoked: [demo.tx.out.send-event-0]
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Member consumer-ackEventGroup-4-88ebcce2-5f8d-41e6-b5e5-953c816736d9 sending LeaveGroup request to coordinator kupchenko-nbU:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Unsubscribed all topics or patterns and assigned partitions
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.846+03:00  INFO 157797 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ackEventGroup-4, groupId=ackEventGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-11-05T15:48:59.847+03:00  INFO 157797 --- [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-11-05T15:48:59.847+03:00  INFO 157797 --- [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-11-05T15:48:59.847+03:00  INFO 157797 --- [container-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-11-05T15:48:59.848+03:00  INFO 157797 --- [container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-ackEventGroup-4 unregistered
+2023-11-05T15:48:59.848+03:00  INFO 157797 --- [container-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ackEventGroup: Consumer stopped
+2023-11-05T15:48:59.848+03:00  INFO 157797 --- [ionShutdownHook] s.i.k.i.KafkaMessageDrivenChannelAdapter : stopped org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@26d02dc6
+2023-11-05T15:48:59.849+03:00  INFO 157797 --- [ionShutdownHook] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel kafka-851109385.ackSendEvent-in-0.errors
+2023-11-05T15:48:59.851+03:00  INFO 157797 --- [ionShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application.kafka-851109385.ackSendEvent-in-0.errors' has 1 subscriber(s).
+2023-11-05T15:48:59.852+03:00  INFO 157797 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-11-05T15:48:59.852+03:00  INFO 157797 --- [ionShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 0 subscriber(s).
+2023-11-05T15:48:59.852+03:00  INFO 157797 --- [ionShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2023-11-05T15:48:59.854+03:00  INFO 157797 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-05T15:49:00.027+03:00  INFO 157797 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-05T15:49:00.036+03:00  INFO 157797 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+Process finished with exit code 130 (interrupted by signal 2: SIGINT)

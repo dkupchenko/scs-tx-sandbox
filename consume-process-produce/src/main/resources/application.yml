@@ -1,4 +1,7 @@
 spring:
+  profiles:
+#    active: tx
+    active: nontx
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -6,40 +9,11 @@ spring:
     password: password
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-
-spring.kafka:
-  bootstrap-servers: localhost:9092
-  consumer.properties:
-    max.poll.records: 50
-    max.poll.interval.ms: 600000 # 10min
-
-spring.cloud:
-  function:
-    definition: "processPerson;ackSendEvent"
-  stream:
-    kafka:
-      binder:
-        replication-factor: 1
-        min-partition-count: 1
-        configuration:
-          isolation:
-            level: read_committed
-        transaction:
-          transaction-id-prefix: sandbox-tx-
-          producer.configuration:
-            retries: 5
-            acks: all
-    bindings:
-      sendPerson-out-0:
-        destination: demo.tx.out.send-person
-      processPerson-in-0:
-        destination: demo.tx.out.send-person
-        group: ackPersonGroup
-      sendEvent-out-0:
-        destination: demo.tx.out.send-event
-      ackSendEvent-in-0:
-        destination: demo.tx.out.send-event
-        group: ackEventGroup
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer.properties:
+      max.poll.records: 50
+      max.poll.interval.ms: 600000 # 10min
 
 logging:
   level:

@@ -8,12 +8,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Event {
+
     long personId;
+    String info;
 
-    String status;
+    public static Event success(Person person) {
+        return new Event(person.getId(), person.toString());
+    }
 
-    public Event(Person person) {
-        this.personId = person.getId();
-        this.status = "Processed";
+    public static Event error(Person person, int maxRequestSize) {
+        var pattern = person.toString() + ",";
+        String tooLongData = "Too long data: " + pattern.repeat(maxRequestSize / pattern.length() + 1);
+        return new Event(person.getId(), tooLongData);
     }
 }
